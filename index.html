@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Questa 🔮</h1>
+
+    <div class="top-bar">
+      <input type="text" id="search-task" placeholder="Search tasks..." />
+      <button id="toggle-theme">🌙</button>
+    </div>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Enter task..." required />
+      <input type="date" id="due-date" />
+      <select id="priority">
+        <option value="Low">Low 🔵</option>
+        <option value="Medium">Medium 🟡</option>
+        <option value="High">High 🔴</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="sort-bar">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="none">None</option>
+        <option value="date">Due Date</option>
+        <option value="priority">Priority</option>
+      </select>
+    </div>
+
+    <div class="stats" id="task-stats">Total: 0 | Completed: 0 | Pending: 0</div>
+    <div class="streak" id="streak-tracker">🔥 Streak: 0 days</div>
+
+    <ul id="task-list"></ul>
+    <button id="clear-all">Clear All Tasks</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
